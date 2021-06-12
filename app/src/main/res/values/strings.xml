@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">appointment0612</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv1">I am in</string>
+    <string name="tv2">You are in</string>
+    <string name="btn1">Check it out</string>
+    <string name="btn_back">back</string>
+    <string name="btn_submit">submit</string>
+
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.appointment0612.LiveData" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="130dp"
+            android:layout_height="65dp"
+            android:text="@string/tv1"
+            android:gravity="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toStartOf="@+id/numPicker2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+        <NumberPicker
+            android:id="@+id/numPicker1"
+            android:layout_width="112dp"
+            android:layout_height="157dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="68dp"
+            android:theme="@style/NumberPickerText"
+
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            app:layout_constraintVertical_bias="0.666" />
+        <!--android:onValueChange="@{(picker,oldv,newv) -> data.getNumPick1(oldv, newv)}"-->
+
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="132dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="56dp"
+            android:text="@string/tv2"
+            android:gravity="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toStartOf="@+id/numPicker2"
+            app:layout_constraintHorizontal_bias="0.033"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+        <NumberPicker
+            android:id="@+id/numPicker2"
+            android:layout_width="111dp"
+            android:layout_height="137dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="68dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline3"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn1"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
