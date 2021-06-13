@@ -68,7 +68,6 @@ public class AFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         LiveData liveData;
         liveData = new ViewModelProvider(this, new SavedStateViewModelFactory(requireActivity().getApplication(), this)).get(LiveData.class);
 
@@ -98,6 +97,7 @@ public class AFragment extends Fragment {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
                 liveData.getNumber().setValue(newVal);
+
                 String s = liveData.getNumber().getValue().toString();
                 Toast.makeText(getActivity(),s,Toast.LENGTH_SHORT).show();
                 //Toast.makeText(getActivity(),"当前值"+newVal+"   " + " 上一个值"+oldVal,Toast.LENGTH_SHORT).show();

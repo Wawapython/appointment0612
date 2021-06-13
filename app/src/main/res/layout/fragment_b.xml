@@ -20,12 +20,13 @@
             android:layout_width="325dp"
             android:layout_height="283dp"
             android:textSize="14sp"
-            android:text="@{String.valueOf(data.number)}"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.24" />
+        <!-- android:text="@{String.valueOf(data.number)}"-->
 
         <Button
             android:id="@+id/btn_back"

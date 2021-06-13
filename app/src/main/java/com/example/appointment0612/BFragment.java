@@ -9,9 +9,11 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.appointment0612.databinding.FragmentBBinding;
 
@@ -72,15 +74,20 @@ public class BFragment extends Fragment {
         binding.setData(liveData);
         binding.setLifecycleOwner(requireActivity());
 
+        String myPlace = liveData.getNumber().getValue().toString();
+
+        Log.i("info",myPlace);
+        binding.tv3.setText(myPlace);
+
         binding.btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NavController controller = Navigation.findNavController(v);
                 controller.navigate(R.id.action_BFragment_to_AFragment);
+
             }
         });
-//        String myPlace = liveData.getNumber().getValue().toString();
-//        binding.tv3.setText(myPlace);
+
 
 
         // Inflate the layout for this fragment
