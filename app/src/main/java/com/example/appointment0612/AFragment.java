@@ -82,6 +82,7 @@ public class AFragment extends Fragment {
             public void onClick(View v) {
                 NavController controller = Navigation.findNavController(v);
                 controller.navigate(R.id.action_AFragment_to_BFragment);
+                liveData.save();
             }
         });
 
