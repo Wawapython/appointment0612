@@ -75,9 +75,12 @@ public class BFragment extends Fragment {
         binding.setLifecycleOwner(requireActivity());
 
         String myPlace = liveData.getNumber().getValue().toString();
+        String calendarS = liveData.getCalendar().getValue();
+        String times = liveData.getTime().getValue();
 
-        Log.i("info",myPlace);
-        binding.tv3.setText(myPlace);
+//        Log.i("info",myPlace);
+//        Log.i("info",calendarS);
+        binding.tv3.setText(myPlace +"\n" + calendarS + "\n" + times);
 
         binding.btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

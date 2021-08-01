@@ -7,5 +7,7 @@
     <string name="btn1">Check it out</string>
     <string name="btn_back">back</string>
     <string name="btn_submit">submit</string>
+    <string name="btnDate">Calendar</string>
+    <string name="btnTime">Time</string>
 
 </resources>
